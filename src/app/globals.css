@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --background: #080808;
+  --foreground: #f3f4f6;
+  --primary: #FF5500;
+  --secondary: #FF2200;
+  --accent: #FFAA00;
+  --card-bg: rgba(18, 18, 18, 0.85);
+  --border-color: rgba(255, 85, 0, 0.2);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--border-color);
+  --font-sans: var(--font-sans), 'Outfit', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-mono), 'Space Grotesk', monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 85, 0, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 85, 0, 0.6);
+}
+
+/* Global utility classes for styling */
+.neon-glow-purple {
+  box-shadow: 0 0 25px rgba(255, 34, 0, 0.25);
+  border-color: rgba(255, 34, 0, 0.4);
+}
+
+.neon-glow-cyan {
+  box-shadow: 0 0 25px rgba(255, 85, 0, 0.25);
+  border-color: rgba(255, 85, 0, 0.4);
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 25px rgba(255, 170, 0, 0.25);
+  border-color: rgba(255, 170, 0, 0.4);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #FF5500 0%, #FF2200 50%, #FFAA00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #FFAA00 0%, #FF2200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at center, rgba(255, 85, 0, 0.15) 0%, transparent 70%);
+}
+
+.glass-panel {
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 85, 0, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
